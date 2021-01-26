@@ -1,0 +1,80 @@
+.header {
+
+    background-color: $imperial_primer;
+    // TODO: poner en una clase auxiliar
+    // padding: 1rem 3rem; // top/down - right/left
+
+    nav {
+        padding: 1.5rem;
+    }
+
+
+    &__name {
+        // min-width: 12em;
+        font-size: $font-large;
+        font-weight: 550;
+        color: $white;
+    }
+
+    &__tabs {
+        
+        > a {
+            color: $white;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__burguer {
+        $burger_line_width: 0.125rem;
+        $burger_line_lenght: 1.625rem;
+        $space_between_lines: 0.3rem;
+        $burger_animation_time: 200ms;
+
+        > span {
+            display: block;
+            width: $burger_line_lenght;
+            height: $burger_line_width;
+            background-color: $white;
+            transform-origin: center center;
+
+            transition: all $burger_animation_time ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: $space_between_lines;
+            }
+        }
+
+        &.opened {
+
+            > span:first-child {
+                opacity: 1;
+                transform: translateY($space_between_lines + $burger_line_width) rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                opacity: 1;
+                transform: translateY(-($space_between_lines + $burger_line_width)) rotate(-45deg);
+            }
+        }
+
+        &.closed {
+            > span:first-child {
+                opacity: 1;
+            }
+
+            > span:nth-child(2) {
+                opacity: 1;
+            }
+
+            > span:last-child {
+                opacity: 1;
+            }
+        }
+    }
+}

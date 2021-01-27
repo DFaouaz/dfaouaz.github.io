@@ -46,7 +46,26 @@ a, a:visited, a:hover {
   }
 }
 
+span.vertical_separator {
+  display: inline-block;
+  height: 1.5rem;
+  width: 0.05rem;
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+span.horizontal_separator {
+  display: block;
+  height: 0.05rem;
+  width: 8rem;
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .header {
+  max-height: 4.25rem;
   background-color: #222f3e;
 }
 
@@ -55,20 +74,26 @@ a, a:visited, a:hover {
 }
 
 .header__name {
-  font-size: 21px;
+  font-size: 1rem;
   font-weight: 550;
   color: white;
+}
+
+@media (max-width: 63.9375em) {
+  .header__name {
+    font-size: 1rem;
+  }
+}
+
+.header__tabs {
+  font-size: 0.875rem;
 }
 
 .header__tabs > a {
   color: white;
 }
 
-.header__tabs > a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.header__burguer > span {
+.header__burger > span {
   display: block;
   width: 1.625rem;
   height: 0.125rem;
@@ -77,33 +102,73 @@ a, a:visited, a:hover {
   transition: all 200ms ease-in-out;
 }
 
-.header__burguer > span:not(:last-child) {
+.header__burger > span:not(:last-child) {
   margin-bottom: 0.3rem;
 }
 
-.header__burguer.opened > span:first-child {
+.header__burger.opened > span:first-child {
   opacity: 1;
   transform: translateY(0.425rem) rotate(45deg);
 }
 
-.header__burguer.opened > span:nth-child(2) {
+.header__burger.opened > span:nth-child(2) {
   opacity: 0;
 }
 
-.header__burguer.opened > span:last-child {
+.header__burger.opened > span:last-child {
   opacity: 1;
   transform: translateY(-0.425rem) rotate(-45deg);
 }
 
-.header__burguer.closed > span:first-child {
+.header__burger.closed > span:first-child {
   opacity: 1;
 }
 
-.header__burguer.closed > span:nth-child(2) {
+.header__burger.closed > span:nth-child(2) {
   opacity: 1;
 }
 
-.header__burguer.closed > span:last-child {
+.header__burger.closed > span:last-child {
   opacity: 1;
+}
+
+.header__burger__menu {
+  position: fixed;
+  top: 4.25rem;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-image: linear-gradient(black, transparent);
+}
+
+.header__burger__menu__tabs {
+  position: relative;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem 3rem;
+  margin-top: 1.5rem;
+}
+
+.header__burger__menu__tabs > a {
+  display: block;
+  color: #222f3e;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.header__burger__menu__tabs > span {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #222f3e;
+}
+
+.header__burger__menu.opened {
+  visibility: visible;
+}
+
+.header__burger__menu.closed {
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

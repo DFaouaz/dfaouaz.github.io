@@ -1,13 +1,17 @@
-const burguer = document.getElementById("burguer");
+const burger = document.getElementById("burger");
+const burger_menu = document.getElementById("burger_menu");
 
-burguer.addEventListener("click", function () {
-    if (burguer.classList.contains("opened")) {
-        burguer.classList.replace("opened", "closed");
+burger.addEventListener("click", function () {
+    if (burger.classList.contains("opened")) {
+        burger.classList.replace("opened", "closed");
+        burger_menu.classList.replace("opened", "closed");
     }
-    else if (burguer.classList.contains("closed")){
-        burguer.classList.replace("closed", "opened");
+    else if (burger.classList.contains("closed")){
+        burger.classList.replace("closed", "opened");
+        burger_menu.classList.replace("closed", "opened");
     }
     else {
-        burguer.classList.add("closed");
+        burger.classList.add("closed");
+        burger_menu.classList.add("closed");
     }
 });

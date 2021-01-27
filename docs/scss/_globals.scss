@@ -45,3 +45,25 @@ a, a:visited, a:hover {
         display: none;
     }
 }
+
+span {
+    &.vertical_separator {
+        display: inline-block;
+        height: 1.5rem;
+        width: 0.05rem;
+        background-color: $white;
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &.horizontal_separator {
+        display: block;
+        height: 0.05rem;
+        width: 8rem;
+        background-color: $white;
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

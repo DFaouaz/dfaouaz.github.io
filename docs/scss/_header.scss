@@ -1,129 +1,16 @@
 .header {
-
-    max-height: 4.25rem;
-    background-color: $imperial_primer;
-    // TODO: poner en una clase auxiliar
-    // padding: 1rem 3rem; // top/down - right/left
-
-    nav {
-        padding: 1.5rem;
-    }
-
+    padding-top: 0.5rem;
 
     &__name {
-        // min-width: 12em;
-        font-size: $font-medium;
-        font-weight: 550;
-        color: $white;
-
-        @include breakpoint_down(tablet){
-            font-size: $font-medium;
-        }
-
+        font-size: $font_large;
     }
 
     &__tabs {
-        font-size: $font-small;
-        
+        margin-right: 1.25rem;
         > a {
-            color: $white;
-            // &:not(:last-child) {
-            //     // margin-right: 1rem;
-            // }
-        }
-    }
-
-    &__burger {
-        $burger_line_width: 0.125rem;
-        $burger_line_lenght: 1.625rem;
-        $space_between_lines: 0.3rem;
-        $burger_animation_time: 200ms;
-
-        > span {
-            display: block;
-            width: $burger_line_lenght;
-            height: $burger_line_width;
-            background-color: $white;
-            transform-origin: center center;
-
-            transition: all $burger_animation_time ease-in-out;
-
-            &:not(:last-child) {
-                margin-bottom: $space_between_lines;
-            }
-        }
-
-        &.opened {
-
-            > span:first-child {
-                opacity: 1;
-                transform: translateY($space_between_lines + $burger_line_width) rotate(45deg);
-            }
-
-            > span:nth-child(2) {
-                opacity: 0;
-            }
-
-            > span:last-child {
-                opacity: 1;
-                transform: translateY(-($space_between_lines + $burger_line_width)) rotate(-45deg);
-            }
-        }
-
-        &.closed {
-            > span:first-child {
-                opacity: 1;
-            }
-
-            > span:nth-child(2) {
-                opacity: 1;
-            }
-
-            > span:last-child {
-                opacity: 1;
-            }
-        }
-
-        &__menu {
-            position: fixed;
-            top: 4.25rem;
-            bottom: 0%;
-            left: 0%;
-            right: 0%;
-            background-image: linear-gradient( black, transparent);
-            
-            &__tabs {
-                position: relative;
-                width: calc(100% - 3rem);
-                left: 50%;
-                transform: translateX(-50%);
-                background: transparentize($color: $white, $amount: 0.1);
-
-                padding: 1.5rem 3rem;
-                margin-top: 1.5rem;
-
-                > a {
-                    display: block;
-                    color: $imperial_primer;
-                    font-size: $font-small;
-                    text-align: center;
-                }
-
-                > span {
-                    margin-left: auto;
-                    margin-right: auto;
-                    background-color: $imperial_primer;
-                }
-            }
-
-            &.opened {
-               visibility: visible;
-            }
-    
-            &.closed {
-               visibility: hidden
-            }
-
+            padding: 0% 1.25rem;
+            font-size: $font_small;
+            letter-spacing: 0.1rem;
         }
     }
 }

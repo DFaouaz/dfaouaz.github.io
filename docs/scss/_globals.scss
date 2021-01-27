@@ -9,13 +9,18 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Public Sans', sans-serif;
+    padding: 0% 5rem;
+    
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.3;
+    color: $white;
+    
+    background-color: $black;
 }
 
 a, a:visited, a:hover {
     text-decoration: none;
+    color: $white;
 }
 
 .flex {
@@ -43,27 +48,5 @@ a, a:visited, a:hover {
 .hide_for_mobile_devices {
     @include breakpoint_down(tablet) {
         display: none;
-    }
-}
-
-span {
-    &.vertical_separator {
-        display: inline-block;
-        height: 1.5rem;
-        width: 0.05rem;
-        background-color: $white;
-
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    &.horizontal_separator {
-        display: block;
-        height: 0.05rem;
-        width: 8rem;
-        background-color: $white;
-
-        margin-top: 1rem;
-        margin-bottom: 1rem;
     }
 }

@@ -1,3 +1,79 @@
-// body {
+body {
+
+    // En resoluciones bajas hace se crea un borde raro
+    .background_image {
+        position: absolute;
+        z-index: -1;
+        background-image: url("../images/foto_fondo.png");
+        background-color: $black;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 55%;
+        height: calc(100% + 8rem);
+
+        right: 8rem;
+        bottom: 0%;
+
+        opacity: 60%;
+    }
+
+}
     
-// }
+    
+.main {
+    padding: 10rem 8rem;
+    display: flex;
+
+    > span {
+        transform-origin: center top;
+        background-color: $white;
+        width: 0.75rem;
+        height: 22.5rem;
+        
+        border-radius: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__info {
+        > p {
+            margin: 0%;
+        }
+        .small_font {
+            font-size: 2rem;
+            font-weight: 200;
+
+            padding-left: 0.5rem;
+        }
+        .medium_font {
+            font-size: 2.625rem;
+            font-weight: 200;
+
+            padding-left: 0.25rem;
+        }
+        .large_font {
+            font-size: 5.625rem;
+        }
+        &_buttons {
+            margin: 3rem 0%;
+            padding-left: 0.5rem;
+
+            > a {
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+
+                &.button {
+                    width: 12.5rem;
+                    height: 4rem;
+
+                    &.wireframe {
+                        border: 0.0625rem solid $white;
+                        background: transparent;
+                    }
+
+                }
+            }
+        }
+    }
+}

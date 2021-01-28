@@ -1,8 +1,12 @@
 .header {
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     &__name {
         font-size: $font_large;
+        @include breakpoint_down(tablet) {
+            font-size: $font_m_large;
+        }
     }
 
     &__tabs {
@@ -13,4 +17,111 @@
             letter-spacing: 0.1rem;
         }
     }
+
+    &__menu__burger {
+
+        > span {
+            display: block;
+
+            width: 1.875rem;
+            height: 0.3125rem;
+
+            background-color: $white;
+            transform-origin: center center;
+
+            border-radius: 1rem;
+
+            transition: all 150ms ease-in-out;
+
+            &:nth-child(2) {
+                width: 1.25rem;
+                margin-left: 1.875rem - 1.25rem;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        &.closed {
+            > span {
+
+                &:nth-child(2) {
+                    opacity: 100%;
+                }
+            }
+        }
+
+        &.opened {
+            > span {
+
+                &:first-child {
+                    transform: translateY(0.25rem + 0.3125rem) rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: translateY(-0.25rem - 0.3125rem) rotate(-45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0%;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        z-index: 5;
+        position: absolute;
+        visibility: hidden;
+ 
+        margin-top: 3.4375rem;
+        top: 0%;
+        bottom: 0%;
+        right: 0%;
+        left: 0%;
+
+        transition: all 150ms ease-in-out;
+
+        &__background {
+            background-image: linear-gradient(to bottom, $black, $dark_blue);
+            opacity: 90%;
+            
+            width: 100%;
+            height: 100%;
+        }
+
+        &__tabs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin-top: 3.4375rem;
+            top: 0%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+
+            > a {
+                display: block;
+                text-align: center;
+
+                padding-top: 0.9rem;
+                padding-bottom: 0.9rem;
+            }
+
+            > nav {
+                padding-top: 0.9rem;
+                padding-bottom: 0.9rem;
+            }
+        }
+        
+        &.opened {
+            visibility: visible;
+        }
+
+        &.closed {
+            visibility: hidden;
+        }
+    }
+
 }

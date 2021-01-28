@@ -67,12 +67,34 @@ a, a:visited, a:hover {
   border-radius: 0.75rem;
 }
 
+a.button {
+  transition: all 150ms ease-in-out;
+}
+
 a.button > p {
   margin: 0%;
   letter-spacing: 0%;
   font-size: 1rem;
   text-align: center;
   padding-bottom: 0.2rem;
+}
+
+a.button:hover {
+  background: #007EA7;
+}
+
+a.button.wireframe {
+  border: 0.0625rem solid white;
+  background: transparent;
+  transition: none;
+}
+
+a.button.wireframe:hover {
+  border: 0.125rem solid white;
+}
+
+a.button.wireframe:hover > p {
+  font-weight: bold;
 }
 
 .header {
@@ -95,9 +117,27 @@ a.button > p {
 }
 
 .header__tabs > a {
+  position: relative;
   padding: 0% 1.25rem;
   font-size: 1rem;
   letter-spacing: 0.1rem;
+}
+
+.header__tabs > a:hover {
+  font-weight: bold;
+  padding: 1rem 1.25rem;
+}
+
+.header__tabs > a:hover:before {
+  content: " ";
+  position: absolute;
+  background: #00A8E8;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10em;
 }
 
 .header__menu__burger > span {
@@ -187,15 +227,15 @@ a.button > p {
 
 body .background_image {
   position: absolute;
-  z-index: -1;
+  z-index: -1000;
   background-image: url("../images/foto_fondo.png");
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 55%;
-  height: calc(100% + 8rem);
-  right: 8rem;
-  bottom: 0%;
+  width: 55vw;
+  height: 110vmin;
+  right: 5vw;
+  top: -10vh;
   opacity: 60%;
 }
 
@@ -209,8 +249,6 @@ body .background_image {
     width: 100%;
     top: 0%;
     right: 0%;
-    bottom: 0%;
-    bottom: 0%;
     opacity: 30%;
   }
 }
@@ -346,10 +384,5 @@ body .background_image {
     height: 3.5rem;
     margin: 0.5rem auto;
   }
-}
-
-.main__info_buttons > a.button.wireframe {
-  border: 0.0625rem solid white;
-  background: transparent;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,9 +12,27 @@
     &__tabs {
         margin-right: 1.25rem;
         > a {
+            position: relative;
             padding: 0% 1.25rem;
             font-size: $font_small;
             letter-spacing: 0.1rem;
+
+            &:hover {
+                font-weight: bold;
+                padding: 1rem 1.25rem;
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    background: $light_blue;
+                    z-index: -1;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    padding-bottom: 10em;
+                }
+            }
         }
     }
 

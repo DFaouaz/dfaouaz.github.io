@@ -1,8 +1,21 @@
 .header {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    &.header {
+        position: fixed;
+        z-index: 1000;
+        top: 0%;
+        width: 100%;
+
+        background-color: rgba($color: #000000, $alpha: 0.8);
+    }
+
+    padding: 0.5em 4.5em;
+
+    @include breakpoint_down(tablet) {
+        padding: 0.5em 1.5em;
+    }
 
     &__name {
+        position: relative;
         font-size: $font_large;
         @include breakpoint_down(tablet) {
             font-size: $font_m_large;
@@ -10,6 +23,7 @@
     }
 
     &__tabs {
+        position: relative;
         margin-right: 1.25rem;
         > a {
             position: relative;
@@ -31,12 +45,14 @@
                     height: 100%;
 
                     padding-bottom: 10em;
+                    // transform: translateY(0.75rem);
                 }
             }
         }
     }
 
     &__menu__burger {
+        position: relative;
 
         > span {
             display: block;
@@ -89,19 +105,19 @@
     }
 
     &__menu {
-        z-index: 5;
-        position: absolute;
-        visibility: hidden;
+        position: fixed;
+        z-index: 500;
  
-        margin-top: 3.4375rem;
-        top: 0%;
         bottom: 0%;
         right: 0%;
         left: 0%;
 
-        transition: all 150ms ease-in-out;
+        height: 100%;
+
 
         &__background {
+            position: relative;
+            
             background-image: linear-gradient(to bottom, $black, $dark_blue);
             opacity: 90%;
             
@@ -111,6 +127,7 @@
 
         &__tabs {
             position: absolute;
+
             width: 100%;
             height: 100%;
             margin-top: 3.4375rem;

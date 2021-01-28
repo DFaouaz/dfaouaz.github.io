@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <!-- TODO: mirar si cambiar a en -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="dist/style.css">
-        <title>Dany Faouaz Santillana</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
-    <body>
-        
-        
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Dany Faouaz Santillana</title>
 
-        <header class="header flex flex-jc-sb flex-ai-c">
+</head>
 
-            <div class="header__name">
-                <a href="/">D<b>Faouaz</b></a>
-            </div>
+<body id="body">
+    <header class="header flex flex-jc-sb flex-ai-c">
+        <div class="header__name">
+            <a href="/">D<b>Faouaz</b></a>
+        </div>
+        <div class="flex flex-ai-c flex-jc-sb hide_for_mobile_devices">
+            <nav class="header__tabs">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
 
-            <div class="flex flex-ai-c flex-jc-sb hide_for_mobile_devices">
-                <nav class="header__tabs">
-                    <a href="/">HOME</a>
-                    <a href="/">ABOUT</a>
-                    <a href="/">PROJECTS</a>
-                    <a href="/">CONTACT</a>
-                </nav>
+            <nav>
+                <a class="button" href="/">
+                    <p>Download <strong>CV</strong></p>
+                </a>
+            </nav>
+        </div>
 
-                <nav>
-                    <a class="button" href="/">
-                        <p>Download <strong>CV</strong></p>
-                    </a>
-                </nav>
-            </div>
+        <div id="burger" class="header__menu__burger closed hide_for_desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
+
+    </header>
+
+    <div id="burger_menu" class="header__menu closed hide_for_desktop">
+                
+        <div class="header__menu__background"></div>
+        <nav class="header__menu__tabs">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+            <nav class="flex flex-jc-c">
+                <a class="button" href="/">
+                    <p>Download <strong>CV</strong></p>
+                </a>
+            </nav>
+        </nav>
+    </div>
+
+    <!-- HOME CONTAINER -->
+    <div id="home" class="container flex">
+        <div class="bg_image"></div>
+        <div class="hero flex flex-ai-c">
+            <span class="hero__line"></span>
             
-            <div class="hide_for_desktop">
-                <div id="burger" class="header__menu__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            
-                <div id="burger_menu" class="header__menu">
-                    
-                    <div class="header__menu__background"></div>
-                    <nav class="header__menu__tabs">
-                        <a href="/">HOME</a>
-                        <a href="/">ABOUT</a>
-                        <a href="/">PROJECTS</a>
-                        <a href="/">CONTACT</a>
-                        <nav class="flex flex-jc-c">
-                            <a class="button" href="/">
-                                <p>Download <strong>CV</strong></p>
-                            </a>
-                        </nav>
-                    </nav>
-                </div>
-
-            </div>
-
-        </header>
-
-
-        <div class="main">
-            <span class="main__line"></span>
-            
-            <div class="main__info">
+            <div class="hero__info">
                 <p class="medium_font">Hello, I am</p>
                 <p class="large_font">Dany <b>Faouaz</b></p>
                 <p class="small_font">A professional Game Developer and Designer</p>
 
                 <span></span>
 
-                <nav class="flex main__info_buttons">
+                <nav class="flex hero__info_buttons">
                     <a class="button" href="/">
                         <p>Download <strong>CV</strong></p>
                     </a>
@@ -87,8 +84,27 @@
             </div>
             
         </div>
-        <div class="background_image" ></div>
+    </div>
 
-        <script src="js/script.js"></script>
-    </body>
+    <!-- ABOUT CONTAINER -->
+    <div id="about" class="container">
+        <h1>ABOUT</h1>
+        <p>WIP</p>
+    </div>
+
+    <!-- PROJECTS CONTAINER -->
+    <div id="projects" class="container">
+        <h1>PROJECTS</h1>
+        <p>WIP</p>
+    </div>
+
+    <!-- CONTACT CONTAINER -->
+    <div id="contact" class="container">
+        <h1>CONTACT</h1>
+        <p>WIP</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>

@@ -1,6 +1,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 *, *::before, *::after {
@@ -8,18 +10,13 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0% 5rem;
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.3;
   color: white;
-  background-color: black;
 }
 
-@media (max-width: 64em) {
-  body {
-    padding: 0% 1.5rem;
-  }
+body.noscroll {
+  overflow: hidden;
 }
 
 a, a:visited, a:hover {
@@ -49,7 +46,7 @@ a, a:visited, a:hover {
   }
 }
 
-@media (max-width: 64em) {
+@media (max-width: 63.999em) {
   .hide_for_mobile_devices {
     display: none;
   }
@@ -68,7 +65,7 @@ a, a:visited, a:hover {
 }
 
 a.button {
-  transition: all 150ms ease-in-out;
+  transition: background 150ms ease-in-out;
 }
 
 a.button > p {
@@ -97,22 +94,202 @@ a.button.wireframe:hover > p {
   font-weight: bold;
 }
 
+.bg_image {
+  position: absolute;
+  background-image: url("../images/foto_fondo.png");
+  background-position: center right;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  opacity: 70%;
+  max-width: 90%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 63.999em) {
+  .bg_image {
+    background-position: center;
+    background-size: 125%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    opacity: 20%;
+  }
+}
+
+@media (max-width: 63.999em) and (min-width: 40em) {
+  .bg_image {
+    background-size: 80%;
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+@media (max-width: 63.999em) {
+  .hero {
+    display: block;
+    margin: auto;
+  }
+}
+
+.hero > span {
+  transform-origin: center top;
+  background-color: white;
+  width: 0.5rem;
+  height: 22.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero > span {
+    display: none;
+  }
+}
+
+.hero__info > p {
+  margin: 0%;
+}
+
+.hero__info > span {
+  display: none;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info > span {
+    display: block;
+    transform-origin: center center;
+    background-color: white;
+    height: 0.125rem;
+    width: 100%;
+    border-radius: 2rem;
+    margin: 2rem 0%;
+  }
+}
+
+@media (max-width: 63.999em) {
+  .hero__info {
+    text-align: center;
+  }
+}
+
+.hero__info .small_font {
+  font-size: 2rem;
+  font-weight: 200;
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info .small_font {
+    padding-left: 0rem;
+    padding-top: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+.hero__info .medium_font {
+  font-size: 2.625rem;
+  font-weight: 200;
+  padding-left: 0.25rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info .medium_font {
+    padding-left: 0rem;
+    font-size: 1.5rem;
+  }
+}
+
+.hero__info .large_font {
+  font-size: 5.625rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info .large_font {
+    padding-left: 0rem;
+    font-size: 3.3rem;
+  }
+}
+
+.hero__info_buttons {
+  margin: 3rem 0%;
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info_buttons {
+    display: block;
+    margin: 0%;
+    padding: 0%;
+  }
+}
+
+@media (max-width: 63.999em) {
+  .hero__info_buttons > a {
+    margin: 1rem 0%;
+  }
+}
+
+.hero__info_buttons > a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info_buttons > a:not(:last-child) {
+    margin: 0%;
+  }
+}
+
+.hero__info_buttons > a.button {
+  width: 12.5rem;
+  height: 4rem;
+}
+
+@media (max-width: 63.999em) {
+  .hero__info_buttons > a.button {
+    width: 10rem;
+    height: 3.5rem;
+    margin: 0.5rem auto;
+  }
+}
+
 .header {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5em 4.5em;
+}
+
+.header.header {
+  position: fixed;
+  z-index: 1000;
+  top: 0%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 63.999em) {
+  .header {
+    padding: 0.5em 1.5em;
+  }
 }
 
 .header__name {
+  position: relative;
   font-size: 3rem;
 }
 
-@media (max-width: 64em) {
+@media (max-width: 63.999em) {
   .header__name {
     font-size: 1.875rem;
   }
 }
 
 .header__tabs {
+  position: relative;
   margin-right: 1.25rem;
 }
 
@@ -138,6 +315,10 @@ a.button.wireframe:hover > p {
   width: 100%;
   height: 100%;
   padding-bottom: 10em;
+}
+
+.header__menu__burger {
+  position: relative;
 }
 
 .header__menu__burger > span {
@@ -176,18 +357,16 @@ a.button.wireframe:hover > p {
 }
 
 .header__menu {
-  z-index: 5;
-  position: absolute;
-  visibility: hidden;
-  margin-top: 3.4375rem;
-  top: 0%;
+  position: fixed;
+  z-index: 500;
   bottom: 0%;
   right: 0%;
   left: 0%;
-  transition: all 150ms ease-in-out;
+  height: 100%;
 }
 
 .header__menu__background {
+  position: relative;
   background-image: linear-gradient(to bottom, black, #003459);
   opacity: 90%;
   width: 100%;
@@ -225,164 +404,27 @@ a.button.wireframe:hover > p {
   visibility: hidden;
 }
 
-body .background_image {
-  position: absolute;
-  z-index: -1000;
-  background-image: url("../images/foto_fondo.png");
+body {
   background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 55vw;
-  height: 110vmin;
-  right: 5vw;
-  top: -10vh;
-  opacity: 60%;
+  margin: 0;
 }
 
-@media (max-width: 64em) {
-  body .background_image {
-    padding-top: auto;
-    padding-bottom: auto;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    opacity: 30%;
+body div.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  padding: 5em 12em;
+}
+
+@media (max-width: 63.999em) {
+  body div.container {
+    padding: 1em 1.5em;
   }
 }
 
-.main {
-  padding: 10rem 8rem;
-  display: flex;
-}
-
-@media (max-width: 64em) {
-  .main {
-    display: block;
-    padding: 10rem 0%;
-  }
-}
-
-.main > span {
-  transform-origin: center top;
-  background-color: white;
-  width: 0.75rem;
-  height: 22.5rem;
-  border-radius: 1rem;
-  margin-right: 1rem;
-}
-
-@media (max-width: 64em) {
-  .main > span {
-    display: none;
-  }
-}
-
-.main__info > p {
-  margin: 0%;
-}
-
-.main__info > span {
-  display: none;
-}
-
-@media (max-width: 64em) {
-  .main__info > span {
-    display: block;
-    transform-origin: center center;
-    background-color: white;
-    height: 0.125rem;
-    width: 100%;
-    border-radius: 2rem;
-    margin: 2rem 0%;
-  }
-}
-
-@media (max-width: 64em) {
-  .main__info {
-    text-align: center;
-  }
-}
-
-.main__info .small_font {
-  font-size: 2rem;
-  font-weight: 200;
-  padding-left: 0.5rem;
-}
-
-@media (max-width: 64em) {
-  .main__info .small_font {
-    padding-left: 0rem;
-    padding-top: 0.75rem;
-    font-size: 1rem;
-  }
-}
-
-.main__info .medium_font {
-  font-size: 2.625rem;
-  font-weight: 200;
-  padding-left: 0.25rem;
-}
-
-@media (max-width: 64em) {
-  .main__info .medium_font {
-    padding-left: 0rem;
-    font-size: 1.5rem;
-  }
-}
-
-.main__info .large_font {
-  font-size: 5.625rem;
-}
-
-@media (max-width: 64em) {
-  .main__info .large_font {
-    padding-left: 0rem;
-    font-size: 3.3rem;
-  }
-}
-
-.main__info_buttons {
-  margin: 3rem 0%;
-  padding-left: 0.5rem;
-}
-
-@media (max-width: 64em) {
-  .main__info_buttons {
-    display: block;
-    margin: 0%;
-    padding: 0%;
-  }
-}
-
-@media (max-width: 64em) {
-  .main__info_buttons > a {
-    margin: 1rem 0%;
-  }
-}
-
-.main__info_buttons > a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-@media (max-width: 64em) {
-  .main__info_buttons > a:not(:last-child) {
-    margin: 0%;
-  }
-}
-
-.main__info_buttons > a.button {
-  width: 12.5rem;
-  height: 4rem;
-}
-
-@media (max-width: 64em) {
-  .main__info_buttons > a.button {
-    width: 10rem;
-    height: 3.5rem;
-    margin: 0.5rem auto;
-  }
+body div.container div.container {
+  width: 90%;
+  height: 90%;
 }
 /*# sourceMappingURL=style.css.map */

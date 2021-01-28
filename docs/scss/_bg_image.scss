@@ -1,0 +1,36 @@
+.bg_image {
+    position: absolute;
+
+    background-image: url("../images/foto_fondo.png");
+    background-position: center right;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    opacity: 70%;
+
+    max-width: 90%;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @include breakpoint_down(tablet) {
+        
+        background-position: center;
+        background-size: 125%;
+
+        @include breakpoint_up(tablet) {
+            background-size: 80%;
+        }
+
+        max-width: 100%;
+
+        height: 100%;
+        width: 100%;
+
+        top: 0%;
+        right: 0%;
+
+        opacity: 20%;
+    }
+}

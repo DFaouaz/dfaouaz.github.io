@@ -38,7 +38,8 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #00A8E8;
+    /* color: #00A8E8; */
+    color: #ffffff;
     outline: none;
     text-decoration: none;
 }
@@ -257,7 +258,7 @@ a:focus {
     }
     
     .navbar .navbar-brand {
-        color: #00A8E8;
+        color: #000000;
     }
     
     .navbar .navbar-nav {
@@ -411,6 +412,7 @@ a:focus {
     
     .hero .hero-text h1 {
         font-size: 45px;
+        transform: none;
     }
     
     .hero .hero-text h2 {
@@ -443,6 +445,7 @@ a:focus {
     
     .hero .hero-text h1 {
         font-size: 35px;
+        transform: none;
     }
     
     .hero .hero-text h2 {
@@ -463,6 +466,7 @@ a:focus {
     
     .hero .hero-text h1 {
         font-size: 30px;
+        transform: none;
     }
     
     .hero .hero-text h2 {
